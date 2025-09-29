@@ -109,30 +109,30 @@ Run the SQL worksheet: `worksheets/07_validation_queries.sql`
 Once the Snowflake Intelligence agent is deployed, you can ask questions across different business contexts:
 
 **Strategic Executive Questions:**
-- "What is our overall WiFi infrastructure ROI and which technology investments should we prioritize based on signal strength performance?"
-- "Compare total cost of ownership and coverage quality between Cisco, Aruba, and Ubiquiti deployments"
-- "Which industry verticals have the best signal coverage and represent growth opportunities?"
+- What is our overall WiFi infrastructure ROI and which technology investments should we prioritize based on signal strength performance?
+- Compare total cost of ownership and coverage quality between Cisco, Aruba, and Ubiquiti deployments
+- Which industry verticals have the best signal coverage and represent growth opportunities?
 
 **Operational Management Questions:**
-- "Which access points have poor signal strength and require immediate attention?"
-- "Show me areas with signal strength below -75 dBm that need coverage improvements"
-- "What are the root causes of poor signal quality and how can we optimize coverage?"
+- Which access points have poor signal strength and require immediate attention?
+- Show me areas with signal strength below -75 dBm that need coverage improvements
+- What are the root causes of poor signal quality and how can we optimize coverage?
 
 **Customer Success Questions:**
-- "Which customers are experiencing poor WiFi coverage and need proactive outreach?"
-- "Compare signal strength and coverage quality across different industry types"
-- "Show me customers with signal strength issues that could impact satisfaction"
+- Which customers are experiencing poor WiFi coverage and need proactive outreach?
+- Compare signal strength and coverage quality across different industry types
+- Show me customers with signal strength issues that could impact satisfaction
 
 **Signal Strength & Coverage Analysis:**
-- "Show me a coverage heatmap analysis based on signal strength measurements"
-- "Which buildings or zones have the weakest WiFi signal and need attention?"
-- "How does signal strength vary throughout the day and what causes interference?"
-- "What's the correlation between client density and signal quality degradation?"
+- Show me a coverage heatmap analysis based on signal strength measurements
+- Which buildings or zones have the weakest WiFi signal and need attention?
+- How does signal strength vary throughout the day and what causes interference?
+- What's the correlation between client density and signal quality degradation?
 
 **QoS & Performance Analysis:**
-- "How does poor signal strength impact throughput and latency across different manufacturers?"
-- "Which access points have packet loss issues correlated with weak signal strength?"
-- "Analyze interference patterns and their impact on WiFi performance"
+- How does poor signal strength impact throughput and latency across different manufacturers?
+- Which access points have packet loss issues correlated with weak signal strength?
+- Analyze interference patterns and their impact on WiFi performance
 
 ## Validation & Testing
 
