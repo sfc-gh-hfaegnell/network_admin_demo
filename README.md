@@ -4,16 +4,6 @@
 
 This comprehensive demo showcases Snowflake's capabilities for WiFi network analytics, demonstrating the complete data flow from raw JSON ingestion to conversational analytics using Snowflake Intelligence. The demo features a sophisticated AI agent that adapts to different business contexts - providing strategic, operational, customer-focused, and technical insights from the same WiFi analytics data.
 
-**Key Learning Outcomes:**
-- Master VARIANT data type and JSON processing in Snowflake
-- Transform semi-structured data into analytical star schema
-- Implement data governance with dynamic masking and RBAC
-- Create advanced semantic views with signal strength and QoS metrics
-- Deploy comprehensive Snowflake Intelligence agent with WiFi analytics capabilities
-- Demonstrate signal strength analysis, coverage assessment, and interference detection
-- Perform correlation analysis between RSSI, throughput, latency, and packet loss
-- Enable natural language queries for coverage gaps, dead zones, and performance optimization
-
 ## Prerequisites & Setup
 
 **Requirements:**
