@@ -7,8 +7,7 @@ This comprehensive demo showcases Snowflake's capabilities for WiFi network anal
 ## Prerequisites & Setup
 
 **Requirements:**
-- Snowflake Enterprise Edition or higher (required for Semantic Views and Snowflake Intelligence)
-- ACCOUNTADMIN privileges for initial setup
+- Access to a Snowflake account with ACCOUNTADMIN role in a region where you have access to Anthropic Claude 4. Otherwise, you will need to enable cross-region inference.
 - Basic SQL knowledge
 - Estimated completion time: 60 minutes (20 min Part 1, 40 min Part 2)
 
@@ -16,7 +15,6 @@ This comprehensive demo showcases Snowflake's capabilities for WiFi network anal
 1. Ensure you have ACCOUNTADMIN access to your Snowflake account
 2. Open Snowsight in your browser
 3. Have this repository open for reference
-4. Note: Enhanced demo includes signal strength (RSSI) analysis - the core of WiFi analytics
 
 ## Demo Architecture
 
@@ -49,7 +47,7 @@ Run the SQL worksheet: `worksheets/01_environment_setup.sql`
 Run the SQL worksheet: `worksheets/02_synthetic_data_creation.sql`
 - Generates realistic WiFi telemetry data with seasonal patterns
 - Creates dimension tables with industry-appropriate distributions
-- **Includes signal strength (RSSI) and QoS metrics** - critical for WiFi analytics
+- Includes signal strength (RSSI) and QoS metrics - critical for WiFi analytics
 - Implements RSSI correlation matrix with throughput, latency, and packet loss
 - Creates realistic interference patterns and environmental factors
 - Generates 1.3M+ QoS measurements with hardware-specific signal characteristics
@@ -94,9 +92,9 @@ Run the SQL worksheet: `worksheets/07_validation_queries.sql`
 - Confirms signal strength data integrity
 - Provides comprehensive data quality metrics
 
-## Sample Business Questions
+## Sample Questions for Snowflake Intelligence
 
-Once the Snowflake Intelligence agent is deployed, you can ask questions across different business contexts:
+Once the Cortex Analyst agent is deployed, you can ask questions across different business contexts:
 
 **Strategic Executive Questions:**
 - What is our overall WiFi infrastructure ROI and which technology investments should we prioritize based on signal strength performance?
@@ -161,13 +159,12 @@ Run the SQL worksheet: `sample-queries/validation_queries.sql`
 ## Extension Ideas
 
 **Advanced Scenarios:**
-- Add real-time streaming data with Snowpipe
+- Add real-time streaming data with Snowpipe Streaming
 - Implement alerting with Snowflake notifications
-- Create Streamlit dashboards for visualization
 - Add machine learning models for predictive analytics
 - Integrate with external WiFi management systems
 - Create specialized agents for different business roles
-- Add Cortex Search for unstructured network documentation
+- Add Cortex Search for unstructured network documentation, customer surveys, support tickets etc.
 
 **Additional Data Sources:**
 - Device inventory management
@@ -177,15 +174,6 @@ Run the SQL worksheet: `sample-queries/validation_queries.sql`
 - Energy consumption metrics
 - Support ticket conversations
 - Network configuration changes
-
-## Cleanup
-
-To remove all demo objects, run:
-```sql
-DROP DATABASE IF EXISTS WIFI_ANALYTICS CASCADE;
-DROP ROLE IF EXISTS NETWORK_ANALYST;
-DROP WAREHOUSE IF EXISTS WIFI_ANALYTICS_WH;
-```
 
 ## Support
 
