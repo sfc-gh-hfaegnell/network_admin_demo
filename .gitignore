@@ -1,0 +1,46 @@
+# Snowflake credentials and sensitive configuration
+snowcli_config.toml
+*.toml
+
+# Deployment scripts (contain sensitive information)
+deploy_demo.sh
+
+# Reference and documentation folders
+Reference/
+SnowCLI Setup Guide
+
+# macOS system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# Environment and local configuration files
+.env
+.env.local
+.env.*.local
+
+# Backup files
+*.bak
+*.backup
+
+# Any files containing credentials or secrets
+*credentials*
+*secrets*
+*password*
+*token*
