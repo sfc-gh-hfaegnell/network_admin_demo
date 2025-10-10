@@ -87,11 +87,9 @@ SELECT
 FROM TRANSFORMED.FACT_AP_STATUS f
 JOIN TRANSFORMED.DIM_ACCESS_POINTS ap ON f.AP_ID = ap.AP_ID;
 
-/*  2. Create Comprehensive Semantic View
+/*  2. Create Semantic View
     ****************************************************
-    IMPORTANT: The semantic view has already been successfully created in your account!
-    
-    The working semantic view was created using this simplified syntax:
+
 */
 
 -- ENHANCED SEMANTIC VIEW WITH SIGNAL STRENGTH ANALYTICS!
@@ -163,7 +161,7 @@ CREATE SEMANTIC VIEW ANALYTICS.NETWORK_ANALYTICS_SV
 SHOW SEMANTIC VIEWS IN SCHEMA ANALYTICS;
 
 /*
-    ENHANCED SEMANTIC VIEW WITH SIGNAL STRENGTH COMPLETE!
+    ENHANCED SEMANTIC VIEW COMPLETE!
     ====================================================
     
     The semantic view now includes comprehensive WiFi analytics capabilities:
@@ -179,89 +177,11 @@ SHOW SEMANTIC VIEWS IN SCHEMA ANALYTICS;
     - Correlation analysis between RSSI and performance metrics
     - Industry-specific signal quality benchmarking
     - Hardware performance comparison by signal strength
-    
-    Reference: https://docs.snowflake.com/en/user-guide/views-semantic/sql
-    Reference: https://docs.snowflake.com/en/user-guide/views-semantic/overview
+
 */
 
 -- Verify the enhanced semantic view exists and is functional
 SHOW SEMANTIC VIEWS IN SCHEMA ANALYTICS;
-
-/*  3. Validate Enhanced Semantic View with Signal Strength
-    ****************************************************
-    Test that the semantic view includes signal strength data
-    and can perform WiFi-specific analytics.
-*/
-
--- Test basic semantic view functionality with QoS data
--- SELECT 
---     'Enhanced Semantic View Validation' AS test_category,
---     'Signal Strength Data Available' AS test_name,
---     COUNT(*) AS qos_measurements
--- FROM SEMANTIC_VIEW(ANALYTICS.NETWORK_ANALYTICS_SV) 
--- WHERE qos_metrics.signal_strength IS NOT NULL
--- LIMIT 1;
-
--- Test signal strength metrics access
--- SELECT 
---     'Signal Strength Validation' AS test_category,
---     'Coverage Analysis' AS test_name,
---     ROUND(AVG(qos_metrics.average_signal_strength), 1) AS avg_signal_strength,
---     ROUND(qos_metrics.poor_coverage_percentage, 2) AS poor_coverage_pct
--- FROM SEMANTIC_VIEW(ANALYTICS.NETWORK_ANALYTICS_SV);
-
--- Test QoS correlation capabilities
--- SELECT 
---     'QoS Correlation Test' AS test_category,
---     'RSSI vs Performance' AS test_name,
---     ROUND(AVG(qos_metrics.average_throughput), 2) AS avg_throughput,
---     ROUND(AVG(qos_metrics.average_latency), 1) AS avg_latency
--- FROM SEMANTIC_VIEW(ANALYTICS.NETWORK_ANALYTICS_SV);
-
-/*  4. Business Intelligence Query Examples
-    ****************************************************
-    Demonstrate the types of business questions that can
-    now be answered using the semantic view.
-*/
-
--- Simple validation queries for the working semantic view
--- Note: Complex queries commented out to avoid field reference errors
-
--- Basic network and customer information
--- SELECT 
---     networks.industry,
---     networks.customer_name,
---     COUNT(*) AS measurement_count
--- FROM SEMANTIC_VIEW(ANALYTICS.NETWORK_ANALYTICS_SV)
--- GROUP BY networks.industry, networks.customer_name
--- LIMIT 10;
-
--- Basic access point information  
--- SELECT 
---     access_points.manufacturer,
---     access_points.ap_model,
---     COUNT(*) AS measurement_count
--- FROM SEMANTIC_VIEW(ANALYTICS.NETWORK_ANALYTICS_SV)
--- GROUP BY access_points.manufacturer, access_points.ap_model
--- LIMIT 10;
-
-/*  5. Semantic View Metadata Validation
-    ****************************************************
-    Verify that all semantic components are properly
-    configured for Snowflake Intelligence.
-*/
-
--- Show semantic view details
-DESCRIBE SEMANTIC VIEW ANALYTICS.NETWORK_ANALYTICS_SV;
-
--- List all dimensions in the semantic view
-SHOW SEMANTIC DIMENSIONS IN SEMANTIC VIEW ANALYTICS.NETWORK_ANALYTICS_SV;
-
--- List all metrics in the semantic view  
-SHOW SEMANTIC METRICS IN SEMANTIC VIEW ANALYTICS.NETWORK_ANALYTICS_SV;
-
--- List all facts in the semantic view
-SHOW SEMANTIC FACTS IN SEMANTIC VIEW ANALYTICS.NETWORK_ANALYTICS_SV;
 
 /*
     Semantic View creation complete!
