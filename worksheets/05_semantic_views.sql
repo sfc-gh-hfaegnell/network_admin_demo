@@ -7,9 +7,6 @@ WiFi Analytics Snowflake Demo - Semantic Views
 5. Validation and Testing
 *************************************************************************************************************/
 
--- Set query tag for tracking
-ALTER SESSION SET query_tag = '{"origin":"wifi_analytics_demo","name":"semantic_views","version":{"major":1, "minor":0}}';
-
 -- Ensure we're in the right context
 USE ROLE NETWORK_ANALYST;
 USE DATABASE WIFI_ANALYTICS;
@@ -208,11 +205,3 @@ SHOW SEMANTIC VIEWS IN SCHEMA ANALYTICS;
     
     Next step: Run 06_snowflake_intelligence.sql
 */
-
--- Final validation summary (commented out to avoid field reference errors)
--- SELECT 
---     'Semantic View Ready' AS status,
---     COUNT(*) AS total_measurements
--- FROM SEMANTIC_VIEW(ANALYTICS.NETWORK_ANALYTICS_SV);
-
-SELECT 'Semantic View Creation Complete' AS status;
