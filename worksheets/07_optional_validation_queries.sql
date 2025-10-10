@@ -7,8 +7,6 @@ WiFi Analytics Snowflake Demo - Validation Queries
 5. End-to-End Demo Validation
 *************************************************************************************************************/
 
--- Set query tag for tracking
-ALTER SESSION SET query_tag = '{"origin":"wifi_analytics_demo","name":"validation","version":{"major":1, "minor":0}}';
 
 -- Ensure we're in the right context
 USE ROLE NETWORK_ANALYST;
