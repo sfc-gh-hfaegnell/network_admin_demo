@@ -7,9 +7,6 @@ WiFi Analytics Snowflake Demo - Snowflake Intelligence Setup
 5. Agent Management and Monitoring
 *************************************************************************************************************/
 
--- Set query tag for tracking
-ALTER SESSION SET query_tag = '{"origin":"wifi_analytics_demo","name":"snowflake_intelligence","version":{"major":1, "minor":0}}';
-
 -- Ensure we're in the right context with proper permissions
 USE ROLE NETWORK_ANALYST;
 USE DATABASE WIFI_ANALYTICS;
@@ -322,24 +319,6 @@ GRANT USAGE ON SCHEMA snowflake_intelligence.logs TO ROLE NETWORK_ANALYST;
 -- GROUP BY networks.industry, access_points.manufacturer
 -- ORDER BY avg_clients DESC;
 
-/*  6. Agent Monitoring and Management
-    ****************************************************
-    Queries to monitor agent usage and effectiveness.
-*/
-
--- Create monitoring view for agent interactions (placeholder structure)
-CREATE OR REPLACE VIEW ANALYTICS.VW_AGENT_MONITORING AS
-SELECT 
-    'Agent Monitoring Setup' AS status,
-    'Ready for deployment' AS message,
-    CURRENT_TIMESTAMP() AS setup_timestamp,
-    'WIFI_ANALYTICS.ANALYTICS.NETWORK_ANALYTICS_SV' AS semantic_view,
-    'WiFi Network Analytics Assistant' AS agent_name;
-
--- Grant appropriate permissions for agent access
-GRANT SELECT ON SEMANTIC VIEW ANALYTICS.NETWORK_ANALYTICS_SV TO ROLE NETWORK_ANALYST;
-GRANT SELECT ON VIEW ANALYTICS.VW_AGENT_MONITORING TO ROLE NETWORK_ANALYST;
-
 /*
     Snowflake Intelligence Agent Configuration Complete!
     
@@ -491,8 +470,3 @@ GRANT SELECT ON VIEW ANALYTICS.VW_AGENT_MONITORING TO ROLE NETWORK_ANALYST;
     - Complete decision support framework for WiFi infrastructure management
 */
 
--- Final readiness check (uncomment to validate)
--- SELECT 'Snowflake Intelligence Ready' AS status, 'Comprehensive Agent Ready for Configuration' AS message;
-
--- Verify semantic view is operational (uncomment to test)
--- SHOW SEMANTIC VIEWS IN SCHEMA ANALYTICS;
