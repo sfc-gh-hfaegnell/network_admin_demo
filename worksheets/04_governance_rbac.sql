@@ -6,8 +6,6 @@ WiFi Analytics Snowflake Demo - Governance and RBAC
 4. Permission Validation and Testing
 *************************************************************************************************************/
 
--- Set query tag for tracking
-ALTER SESSION SET query_tag = '{"origin":"wifi_analytics_demo","name":"governance_rbac","version":{"major":1, "minor":0}}';
 
 -- Switch to ACCOUNTADMIN for governance setup
 USE ROLE ACCOUNTADMIN;
