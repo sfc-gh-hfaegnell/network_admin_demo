@@ -7,9 +7,6 @@ WiFi Analytics Snowflake Demo - Data Transformation
 5. Data Type Casting and Performance
 *************************************************************************************************************/
 
--- Set query tag for tracking
-ALTER SESSION SET query_tag = '{"origin":"wifi_analytics_demo","name":"data_transformation","version":{"major":1, "minor":0}}';
-
 -- Ensure we're in the right context
 USE ROLE NETWORK_ANALYST;
 USE DATABASE WIFI_ANALYTICS;
