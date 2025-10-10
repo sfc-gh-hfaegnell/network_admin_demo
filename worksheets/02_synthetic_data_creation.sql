@@ -6,9 +6,6 @@ WiFi Analytics Snowflake Demo - Synthetic Data Generation
 4. Data Population with Business Scenarios
 *************************************************************************************************************/
 
--- Set query tag for tracking
-ALTER SESSION SET query_tag = '{"origin":"wifi_analytics_demo","name":"data_generation","version":{"major":1, "minor":0}}';
-
 -- Ensure we're in the right context
 USE ROLE NETWORK_ANALYST;
 USE DATABASE WIFI_ANALYTICS;
