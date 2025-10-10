@@ -6,8 +6,6 @@ WiFi Analytics Snowflake Demo - Environment Setup
 4. Context Setting
 *************************************************************************************************************/
 
--- Set query tag for tracking
-ALTER SESSION SET query_tag = '{"origin":"wifi_analytics_demo","name":"environment_setup","version":{"major":1, "minor":0}}';
 
 /*
     Environment Setup for WiFi Analytics Demo
@@ -76,9 +74,10 @@ GRANT CREATE TABLE ON SCHEMA WIFI_ANALYTICS.RAW TO ROLE NETWORK_ANALYST;
 GRANT CREATE TABLE ON SCHEMA WIFI_ANALYTICS.TRANSFORMED TO ROLE NETWORK_ANALYST;
 GRANT CREATE VIEW ON SCHEMA WIFI_ANALYTICS.ANALYTICS TO ROLE NETWORK_ANALYST;
 GRANT CREATE SEMANTIC VIEW ON SCHEMA WIFI_ANALYTICS.ANALYTICS TO ROLE NETWORK_ANALYST;
+GRANT CREATE AGENT ON SCHEMA WIFI_ANALYTICS.ANALYTICS TO ROLE NETWORK_ANALYST;
 
 -- Grant role to current user (adjust as needed)
-GRANT ROLE NETWORK_ANALYST TO USER henry;
+GRANT ROLE NETWORK_ANALYST TO USER ["ADD USER HERE"];
 
 /*  4. Set Context for Demo
     ****************************************************
