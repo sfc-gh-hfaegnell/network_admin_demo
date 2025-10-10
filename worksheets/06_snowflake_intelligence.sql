@@ -30,40 +30,22 @@ USE WAREHOUSE WIFI_ANALYTICS_WH;
 
 /*  1. Pre-deployment Validation
     ****************************************************
-    Verify that the semantic view is properly configured
-    and accessible before creating the intelligence agent.
+    Verify that the you have the fundamental Snowflake Intelligence and agent privileges properly configured. If don't, run the following:
+
+-- Create the core Snowflake Intelligence database
+CREATE DATABASE IF NOT EXISTS snowflake_intelligence;
+GRANT USAGE ON DATABASE snowflake_intelligence TO ROLE NETWORK_ANALYST;
+
+-- Create the agents schema for storing agents
+CREATE SCHEMA IF NOT EXISTS snowflake_intelligence.agents;
+GRANT USAGE ON SCHEMA snowflake_intelligence.agents TO ROLE NETWORK_ANALYST;
+
+-- Create the logs schema for feedback storage
+CREATE SCHEMA IF NOT EXISTS snowflake_intelligence.logs;
+GRANT USAGE ON SCHEMA snowflake_intelligence.logs TO ROLE NETWORK_ANALYST;
+
 */
 
--- Verify semantic view exists and is functional
-SELECT 
-    'Pre-deployment Check' AS validation_step,
-    'Semantic View Access' AS test_name,
-    COUNT(*) AS record_count
-FROM SEMANTIC_VIEW(ANALYTICS.NETWORK_ANALYTICS_SV)
-LIMIT 1;
-
--- Verify key business entities are available
-SELECT 
-    'Business Entity Check' AS validation_step,
-    'Customer Networks' AS entity_type,
-    COUNT(DISTINCT networks.customer_name) AS entity_count
-FROM SEMANTIC_VIEW(ANALYTICS.NETWORK_ANALYTICS_SV)
-
-UNION ALL
-
-SELECT 
-    'Business Entity Check',
-    'Access Point Models',
-    COUNT(DISTINCT access_points.ap_model)
-FROM SEMANTIC_VIEW(ANALYTICS.NETWORK_ANALYTICS_SV)
-
-UNION ALL
-
-SELECT 
-    'Business Entity Check',
-    'Industry Verticals',
-    COUNT(DISTINCT networks.industry)
-FROM SEMANTIC_VIEW(ANALYTICS.NETWORK_ANALYTICS_SV);
 
 /*  2. Snowflake Intelligence Agent Creation
     ****************************************************
