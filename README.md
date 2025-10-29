@@ -1,5 +1,7 @@
 # WiFi Analytics Snowflake Demo
 
+Supporting Presentation: https://docs.google.com/presentation/d/1bDESqIsWpXZLbbnVv6AMj1d50k24jtYsoWqcugN9nws/edit?usp=sharing
+
 ## Overview & Objectives
 
 This comprehensive demo showcases Snowflake's capabilities for WiFi network analytics, demonstrating the complete data flow from raw JSON to conversational analytics using Snowflake Intelligence. The demo features a sophisticated AI agent that adapts to different business contexts - providing strategic, operational, customer-focused, and technical insights from the same WiFi analytics data.
